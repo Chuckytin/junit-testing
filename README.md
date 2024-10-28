@@ -2,6 +2,25 @@
 
 Este proyecto contiene una serie de pruebas para la clase `Example`. Cada prueba verifica el comportamiento correcto de diferentes métodos de la clase. 
 
+## Dependencias
+
+Las dependencias principales de este proyecto son:
+
+- **JUnit 5** (`junit-jupiter-api`): Utilizada para realizar las pruebas unitarias, permite definir, organizar y ejecutar los casos de prueba.  
+- **JaCoCo** (`jacoco-maven-plugin`): Utilizado para generar informes de cobertura de código. Con este plugin, el proyecto crea un reporte en la carpeta `target/site/index.html` que muestra qué partes del código están cubiertas por pruebas, divididas en tres niveles:
+  - **Verde**: código completamente cubierto por pruebas.
+  - **Amarillo**: código parcialmente cubierto.
+  - **Rojo**: código no cubierto.
+
+### Configuración de Cobertura
+
+En el archivo `pom.xml`, JaCoCo está configurado para:
+
+- Generar un reporte de cobertura (`goal: report`) en la fase de pruebas.
+- Establecer un umbral de cobertura de al menos **85%** de líneas de código (`COVEREDRATIO`). Si no se cumple con este porcentaje, el proceso de compilación e instalación fallará. 
+
+Para ver el reporte de cobertura, abre `target/site/index.html` en un navegador después de ejecutar `mvn test`.
+
 ### Aserciones de JUnit utilizadas
 
 1. **`assertEquals(expected, actual)`**: Compara un valor esperado con el actual y falla si son diferentes.
@@ -10,6 +29,8 @@ Este proyecto contiene una serie de pruebas para la clase `Example`. Cada prueba
 4. **`assertNotNull(object)`**: Asegura que un objeto no sea `null`.
 5. **`assertInstanceOf(expectedType, object)`**: Verifica que el tipo de un objeto es el esperado.
 6. **`assertThrows(expectedException.class, executable)`**: Verifica que una excepción específica es lanzada.
+
+---
 
 ### Métodos en la clase `Example`
 
