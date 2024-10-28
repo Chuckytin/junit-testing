@@ -2,6 +2,15 @@
 
 Este proyecto contiene una serie de pruebas para la clase `Example`. Cada prueba verifica el comportamiento correcto de diferentes métodos de la clase. 
 
+### Aserciones de JUnit utilizadas
+
+1. **`assertEquals(expected, actual)`**: Compara un valor esperado con el actual y falla si son diferentes.
+2. **`assertTrue(condition)`**: Evalúa una condición booleana que debe ser `true`.
+3. **`assertFalse(condition)`**: Evalúa una condición booleana que debe ser `false`.
+4. **`assertNotNull(object)`**: Asegura que un objeto no sea `null`.
+5. **`assertInstanceOf(expectedType, object)`**: Verifica que el tipo de un objeto es el esperado.
+6. **`assertThrows(expectedException.class, executable)`**: Verifica que una excepción específica es lanzada.
+
 ### Métodos en la clase `Example`
 
 1. **`sumar(int a, int b)`**
@@ -52,16 +61,3 @@ Este proyecto contiene una serie de pruebas para la clase `Example`. Cada prueba
 11. **`convertirListaAString(List<String> lista)`**
     - Convierte una lista de strings a un solo string en mayúsculas, con los elementos separados por comas.
     - **Prueba**: `assertEquals(expected, actual);` valida que la conversión de lista a string sea correcta.
-
-### Aserciones de JUnit utilizadas
-
-1. **`assertEquals(expected, actual)`**: Compara un valor esperado con el actual y falla si son diferentes.
-2. **`assertTrue(condition)`**: Evalúa una condición booleana que debe ser `true`.
-3. **`assertFalse(condition)`**: Evalúa una condición booleana que debe ser `false`.
-4. **`assertNotNull(object)`**: Asegura que un objeto no sea `null`.
-5. **`assertInstanceOf(expectedType, object)`**: Verifica que el tipo de un objeto es el esperado.
-6. **`assertThrows(expectedException.class, executable)`**: Verifica que una excepción específica es lanzada.
-
----
-
-Este `README.md` cubre tanto los métodos como las aserciones usadas para probar su funcionalidad, proporcionando una guía clara para cualquiera que desee entender o extender las pruebas. ¡Gracias por revisar este proyecto de pruebas JUnit!
